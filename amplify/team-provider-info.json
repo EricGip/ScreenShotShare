@@ -1,20 +1,26 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-screenshotshare-dev-183944-authRole",
-      "UnauthRoleArn": "arn:aws:iam::770708266211:role/amplify-screenshotshare-dev-183944-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::770708266211:role/amplify-screenshotshare-dev-183944-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-screenshotshare-dev-183944-deployment",
-      "UnauthRoleName": "amplify-screenshotshare-dev-183944-unauthRole",
-      "StackName": "amplify-screenshotshare-dev-183944",
-      "StackId": "arn:aws:cloudformation:us-east-2:770708266211:stack/amplify-screenshotshare-dev-183944/b0bda7c0-38fe-11eb-bf68-02b28f38529c",
-      "AmplifyAppId": "d4vnhw4ojj9ao"
-    },
-    "categories": {
-      "auth": {
-        "screenshotshare97ce1f1f": {}
-      }
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-screenshotshare-dev-183944-authRole",
+            "UnauthRoleArn": "arn:aws:iam::770708266211:role/amplify-screenshotshare-dev-183944-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::770708266211:role/amplify-screenshotshare-dev-183944-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-screenshotshare-dev-183944-deployment",
+            "UnauthRoleName": "amplify-screenshotshare-dev-183944-unauthRole",
+            "StackName": "amplify-screenshotshare-dev-183944",
+            "StackId": "arn:aws:cloudformation:us-east-2:770708266211:stack/amplify-screenshotshare-dev-183944/b0bda7c0-38fe-11eb-bf68-02b28f38529c",
+            "AmplifyAppId": "d4vnhw4ojj9ao"
+        },
+        "categories": {
+            "auth": {
+                "screenshotshare97ce1f1f": {}
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d4vnhw4ojj9ao",
+                    "type": "manual"
+                }
+            }
+        }
     }
-  }
 }
