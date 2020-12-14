@@ -13,34 +13,47 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    meta: {
+      title: "Home Page",
+    }
   },
   {
     path: "/signup",
     name: "SignUpPage",
-    component: SignUpPage
+    component: SignUpPage,
+    meta: {
+      title: "Sign Up Page",
+    }
+    
   },
   {
     path: '/album/:id',
     name: 'AlbumDetailPage',
     component: AlbumDetailPage,
     // meta information for our middleware down there. 
-    meta: {requiresAuth: true}
+    meta: {
+      requiresAuth: true,
+      title: "Album Detail Page",
+  }
   },
   {
     path: "/albums",
     name: AlbumsPage,
     component: AlbumsPage,
-    meta: {requiresAuth: true}
+    meta: {
+      requiresAuth: true,
+      title: "Albums Page",
+    }
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  // }
 ]
 
 const router = new VueRouter({
@@ -55,6 +68,10 @@ const router = new VueRouter({
 router.beforeEach(async (to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
   const isAuthenticated = await Auth.currentUserInfo();
+
+  window.document.title = to.meta && to.meta.title ? to.meta.title : 'Home';
+
+  next();
 
   // if we don't require auth, and they are authenticated, go next. if not, go to home "/". 
   if (requiresAuth && !isAuthenticated) {
