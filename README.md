@@ -14,7 +14,7 @@ This project was created with AWS Amplify backend and Vue frontend.
 
 # How its made 
 
-I'm interested in Infrastructure / Site Reliability Engineering, so I wanted to work with AWS Amplify for a web app.  
+I wanted to work with AWS Amplify for a web app.  
 We were easily able to implement authentication, use graphQL to communicate with our S3 buckets as album storage, and even host it within a few lines.   
 
 Vue and Tailwind carried the frontend, I still prefer the React state management cycle but i'm glad I was able to easily pick up another front end framework after completely grasping the fundamentals. 
