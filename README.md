@@ -1,6 +1,7 @@
 # Screen Shot Share!
 
-# [Demo](https://dev.d4vnhw4ojj9ao.amplifyapp.com/)
+# ~~[Demo]~~
+Demo has been taken down due to security concerns.
 
 This project was created with AWS Amplify backend and Vue frontend.
 
